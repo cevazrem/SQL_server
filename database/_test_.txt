@@ -1,6 +1,10 @@
-#Ignore
-#DB Version 2.3
-#
-#
-#
-#
+#Start_Ignore
+#This is the DB config file
+#DB Version=Parser_test
+#Debug options=false
+#Select=true
+#Update=true
+#Delete=true
+#Drop=true
+#Create=true
+#End_Ignore
