@@ -5,6 +5,11 @@
 #include "socket.h"
 #include "../sql/sql.h"
 
+#ifdef _WIN32
+#include <Windows.h>
+#elif __LINUX__
+#include <unistd.h>
+#endif
 
 class Server : public Socket
 {

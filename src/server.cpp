@@ -197,7 +197,11 @@ int Server::serv_recv(int &sock, std::string &message) {
 void Server::loop() {
 	try {
 		while (serv_works) {
+#ifdef __LINUX__
 			sleep(1);
+#elif _WIN32
+			Sleep(1);
+#endif
 			serv_nodelay(sock_get(), 1U);
 			serv_accept();
 			serv_select();

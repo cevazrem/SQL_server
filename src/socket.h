@@ -14,6 +14,7 @@
 	#define _WINSOCK_DEPRECATED_NO_WARNINGS
 	#include <winsock2.h>
 	#include <WS2tcpip.h>
+	#include <Windows.h>
 	#pragma comment (lib, "Ws2_32.lib")
 #endif
 

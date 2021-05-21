@@ -51,7 +51,11 @@ void Client::loop() {
 
 	try {
 		while (Client::client_works) {
+#ifdef __LINUX__
 			sleep(1);
+#elif _WIN32
+			Sleep(1);
+#endif
 			message.erase();
 			std::cout << " > ";
 			getline(std::cin, message);
