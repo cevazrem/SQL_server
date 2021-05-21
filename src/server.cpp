@@ -84,7 +84,7 @@ void Server::serv_accept() {
 					else
 						++tmp;
 #elif __linux__
-					if (errno != EAGAIN && errno != EWOULDBLOCK)
+					if (errno != EWOULDBLOCK)
 						throw std::runtime_error("Error while accepting connections");
 					else
 						++tmp;

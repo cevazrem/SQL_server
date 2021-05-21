@@ -1,5 +1,5 @@
 COMPILER=g++
-FLAGS=-g -O2 -ftrapv -Wall -Wextra
+FLAGS=-Wall -Wformat-security -Wignored-qualifiers -Winit-self -Wswitch-default -Wfloat-equal -Wpointer-arith -Wtype-limits -Wempty-body -Wlogical-op -Wmissing-field-initializers -Wcast-qual -Wwrite-strings
 
 main: main.o socket.o server.o client.o sql.o dbhandler.o
 	$(COMPILER) $^ -o $@

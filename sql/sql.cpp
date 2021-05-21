@@ -529,7 +529,7 @@ void SQL::SQL_update() {
 	}
 
 	unsigned ind = 0;
-	for (ind; ind < curr_table.size(); ++ind) {
+	for (; ind < curr_table.size(); ++ind) {
 		if (field[0] == curr_table[ind].name) {
 			break;
 		}
@@ -1620,7 +1620,7 @@ void SQL::SQL_WHERE_clause(const std::string& key) {
 				bool good = true;
 				unsigned i = 1, j = 1;
 
-				for (i; i < curr_templ.size() && j < curr_string[ind].size(); ++i, ++j) {
+				for (; i < curr_templ.size() && j < curr_string[ind].size(); ++i, ++j) {
 					if (curr_templ[i] == '_') {
 						continue;
 					}

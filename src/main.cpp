@@ -52,6 +52,8 @@ int main(int argc, char* argv[]) {
 		}
 		break;
 	}
+    default:
+        std::cout << "Error: Unexpected argc value" << std::endl;
 	}
 
 	std::cout << " > Debug info:" << std::endl;
